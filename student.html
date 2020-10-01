@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e:Vision Portal</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="student">
+    <div class="row" style=" margin: 0;">
+        <!--Side Navigation On Desktop-->
+        <div id="sidenav" class="col-lg-3 col-xl-2 p-5 d-none d-lg-block" style="background-color: #7090b011;">
+            <div class="d-flex justify-content-center mb-5">
+                <img width="110px" height="120px"
+                    src="https://www.kingstoncityrun.com/v2/wp-content/uploads/2019/01/UTECH.png">
+            </div>
+            <div class="list-group">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                    href="#list-home" role="tab" aria-controls="home">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-house-door-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
+                                <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                            </svg>
+                        </div>
+                        <div class="col-auto">
+                            Home
+                        </div>
+                    </div>
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+                    href="#list-profile" role="tab" aria-controls="profile">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-person-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg>
+                        </div>
+                        <div class="col">
+                            Profile
+                        </div>
+                    </div>
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-timetable-list" data-toggle="list"
+                    href="#list-timetable" role="tab" aria-controls="timetable">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-calendar-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
+                            </svg>
+                        </div>
+                        <div class="col">
+                            Timetable
+                        </div>
+                    </div>
+                </a>
+                <a class="list-group-item list-group-item-action" id="list-inbox-list" data-toggle="list"
+                    href="#list-inbox" role="tab" aria-controls="inbox">
+                    <div class="row align-items-center">
+                        <div class="col-2">
+                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16" class="bi bi-inbox-fill"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 
+                                    .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4H4.98zm-1.17-.437A1.5 
+                                    1.5 0 0 1 4.98 3h6.04a1.5 1.5 0 0 1 1.17.563l3.7 4.625a.5.5 0 0 1 .106.374l-.39 3.124A1.5 1.5 0 0 1 14.117 
+                                    13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374l3.7-4.625z" />
+                            </svg>
+                        </div>
+                        <div class="col">
+                            Inbox
+                        </div>
+                    </div>
+                </a>
+                <a class="list-group-item list-group-item-action" href="login.html" role="tab"
+                    aria-controls="logout">Logout</a>
+            </div>
+        </div>
+
+        <div class="col-lg-9 col-xl-10 p-5">
+            <!--Mobile navigation-->
+            <div id="mobileNav" class="row d-lg-none">
+                <div class="col">
+                    <nav class="navbar navbar-expand-lg navbar-light mb-5">
+                        <a class="navbar-brand" href="#">
+                            <img src="https://www.kingstoncityrun.com/v2/wp-content/uploads/2019/01/UTECH.png"
+                                width="30" height="30" alt="" loading="lazy">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                            aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarToggle">
+                            <div class="list-group">
+                                <a class="list-group-item list-group-item-action active" id="list-home-list"
+                                    data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16"
+                                                class="bi bi-house-door-fill" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                            </svg>
+                                        </div>
+                                        <div class="col-auto">
+                                            Home
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" id="list-profile-list"
+                                    data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16"
+                                                class="bi bi-person-fill" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                            </svg>
+                                        </div>
+                                        <div class="col">
+                                            Profile
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" id="list-timetable-list"
+                                    data-toggle="list" href="#list-timetable" role="tab" aria-controls="timetable">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16"
+                                                class="bi bi-calendar-fill" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                        </div>
+                                        <div class="col">
+                                            Timetable
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" id="list-inbox-list"
+                                    data-toggle="list" href="#list-inbox" role="tab" aria-controls="inbox">
+                                    <div class="row align-items-center">
+                                        <div class="col-2">
+                                            <svg width="1.25rem" height="1.5rem" viewBox="0 0 16 16"
+                                                class="bi bi-inbox-fill" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd"
+                                                    d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 
+                                                    .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4H4.98zm-1.17-.437A1.5 
+                                                    1.5 0 0 1 4.98 3h6.04a1.5 1.5 0 0 1 1.17.563l3.7 4.625a.5.5 0 0 1 .106.374l-.39 3.124A1.5 1.5 0 0 1 14.117 
+                                                    13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374l3.7-4.625z" />
+                                            </svg>
+                                        </div>
+                                        <div class="col">
+                                            Inbox
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="list-group-item list-group-item-action" href="login.html"
+                                    aria-controls="logout">Logout</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="tab-content" id="nav-tabContent">
+                <!--Home tab-->
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="display-4" style="font-size: 2.5rem;">Welcome to the UTech Portal, John Brown
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="h6 text-muted">Last logged in: September 20, 2020 at 7:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="row mt-5 mb-5">
+                        <div class="col-12 col-xl-6 mb-sm-5 mb-5 mb-xl-1">
+                            <div class="card ios-card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Notice Board</h5>
+
+                                    <div class="list-group list-group-flush my-2">
+                                        <a href="#" class="list-group-item list-group-item-action text-truncate">
+                                            Extension of Selection of Modules, Add-Drop & Registration Reminder
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action text-truncate">
+                                            Limited Service of the Office of Admissions and Enrolment Management
+                                            /september 28, 2020 - 10:00 a.m. - 12:00
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">Library Amnesty</a>
+                                        <a href="#" class="list-group-item list-group-item-action">Graduate Students
+                                            Enrolment Steps</a>
+                                        <a href="#"
+                                            class="list-group-item list-group-item-action text-truncate">Enrolment &
+                                            Registration Start Date Notice for Semester 1 AY 2020-2021</a>
+                                    </div>
+
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination justify-content-center">
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6 mb-5 mb-xl-1">
+                            <div class="card calendar">
+                                <div class="card-body">
+                                    <h5 class="card-title">Important Dates</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Upcoming Events</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>August 24-Dec 11</td>
+                                                    <td>SEMESTER 1 Academic Year 2020/2021 (16 weeks)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>September 07–November 09</td>
+                                                    <td>Submission of withdrawal from a module offered in Semester 1, refunds not applicable</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>September 14–November 09</td>
+                                                    <td>Submission of requests for withdrawal from a Course of Study for Semester 1 (See Regulation 3, Student Handbook and Fee payment Policy)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-xl-6 mb-5 mb-xl-1">
+                            <div class="card ios-card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="card-title float-left">Intray Messages</h5>
+                                            <a href="#" class="float-right">View All Messages</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="list-group list-group-flush my-2">
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    Financial Clearance for Semester 1, 2020-21 <span
+                                                        class="badge badge-primary">New</span>
+                                                </a>
+                                                <a href="#" class="list-group-item list-group-item-action">
+                                                    Fee Payment Schedule Semester 1, 2020-21 <span
+                                                        class="badge badge-primary">New</span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-6">
+                            <div class="card ios-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Enrolment Status</h5>
+                                    <div class="row">
+                                        <div class="col">
+                                            <ul class="list-unstyled">
+                                                <li><p class="h6">SEMESTER 1 : CRO - CURRENT REG ON (Current registered on line)</p></li>
+                                                <li><p class="h6">SEMESTER 2 : - ()</p></li>
+                                                <li><p class="h6">SUMMER : - ()</p></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Profile tab-->
+                <div class="tab-pane fade show" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-3 mb-sm-5 mb-5">
+                            <div class="card ios-card">
+                                <div class="card-body">
+                                    <div class="row mb-3">
+                                        <div class="col">
+                                            <img width="100px"
+                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTKMvO4ydq3DuBwMUTliFGqGm641axT0vrKaQ&usqp=CAU"
+                                                class="rounded mx-auto d-block">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-1">
+                                        <div class="col">
+                                            <p class="h4 text-center">John Brown &bullet; 1234567</p>
+                                            <p class="h5 text-muted text-center">Academic Year 2020/21</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <p class="h6 text-muted">Status: <span class="progression">Progressed</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer p-3">
+                                    <a href="#">View/Edit Personal Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-3 mb-sm-5 mb-5">
+                            <div class="card ios-card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="h5">Academic Performance</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <canvas id="gpa-history"></canvas>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <p class="h6">Current GPA: 3.3</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer p-3">
+                                    <a href="#">View Grades</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-5 order-xl-4">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="h4">Current Modules</p>
+                                </div>
+                            </div>
+                            <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
+                                <div class="col-auto">
+                                    <div class="card current-modules" style="background-color: #aadef063;">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <img width="80px" class="rounded img-thumbnail"
+                                                        src="https://static.thenounproject.com/png/807839-200.png">
+                                                </div>
+                                                <div class="col">
+                                                    <p class="h3">Physics</p>
+                                                    <p class="h5">650 hours</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <svg width="3rem" height="2.5rem" viewBox="0 0 16 16"
+                                                        class="bi bi-chevron-right" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="card current-modules" style="background-color: #f1f1b991;">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <img width="80px" class="rounded img-thumbnail"
+                                                        src="https://www.iconfinder.com/data/icons/mathematics/66/30-512.png">
+                                                </div>
+                                                <div class="col">
+                                                    <p class="h3">Calculus</p>
+                                                    <p class="h5">500 hours</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <svg width="3rem" height="2.5rem" viewBox="0 0 16 16"
+                                                        class="bi bi-chevron-right" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="card current-modules" style="background-color: #af88ee85;">
+                                        <div class="card-body">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <img width="80px" class="rounded img-thumbnail"
+                                                        src="https://icons-for-free.com/iconfiles/png/512/coding+development+html5+program+programming+icon-1320192727450267956.png">
+                                                </div>
+                                                <div class="col text-truncate">
+                                                    <p class="h3">Web Programming</p>
+                                                    <p class="h5">500 hours</p>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <svg width="3rem" height="2.5rem" viewBox="0 0 16 16"
+                                                        class="bi bi-chevron-right" fill="currentColor"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd"
+                                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-6 col-xl-3 mb-sm-5 mb-5">
+                            <div class="row mb-4">
+                                <div class="col">
+                                    <div class="card ios-card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="h5 float-left">Account Balance</p>
+                                                    <a href="#" class="float-right">View transactions</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <span class="lead">$0.00</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer p-3">
+                                            <a href="#">View Fee Schedule</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card ios-card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="h5 float-left">Grants/Sponsorships</p>
+                                                    <a href="#" class="float-right">View more</a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <span class="lead">No grants or sponsorships</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-xl-3 mb-5">
+                            <div class="card ios-card">
+                                <div class="card-body">
+                                    <p class="h5">Generate Reports</p>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Provisional Transcript</a></li>
+                                        <li><a href="#">Exam Timetable</a></li>
+                                        <li><a href="#">Provisional Award Details</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5">
+                        <div class="col-12 col-xl-4 mb-5 mb-xl-1">
+                            <div class="card ios-card text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Academic Advisor</h5>
+                                    <p class="h4 mb-3">Mrs Jane Doe</p>
+                                    <p class="h6">Consultation Hours</p>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Monday</th>
+                                                <th>Wednesday</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>12:00 PM - 1:00 PM</td>
+                                                <td>2:00 PM - 3:00 PM</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <ul class="list-inline mt-4">
+                                        <li class="list-inline-item mr-3">
+                                            <a href="#" class="advisor-contact-link">
+                                                <svg width="1.2rem" height="1.2rem" viewBox="0 0 16 16" class="bi bi-telephone-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item ml-3">
+                                            <a href="#" class="advisor-contact-link">
+                                                <svg width="1.2rem" height="1.2rem" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-4 mb-5 mb-xl-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Career and Placement</h5>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#"><p class="h6">Student Placement Application</p></a></li>
+                                        <li><a href="#"><p class="h6">Student CV</p></a></li>
+                                        <li><a href="#"><p class="h6">Student Placement List</p></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-xl-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Useful Links</h5>
+                                    <ul class="list-unstyled">
+                                        <li><a href="#"><p class="h6">Change Password</p></a></li>
+                                        <li><a href="#"><p class="h6">Add or Remove Security Questions and Answers</p></a></li>
+                                        <li><a href="#"><p class="h6">Student Handbook</p></a></li>
+                                        <li><a href="#"><p class="h6">Accessing Past Papers</p></a></li>
+                                        <li><a href="#"><p class="h6">Electives Handbook</p></a></li>
+                                        <li><a href="#"><p class="h6">Module Database</p></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Timetable tab-->
+                <div class="tab-pane fade show" id="list-timetable" role="tabpanel"
+                    aria-labelledby="list-timetable-list">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <p class="h3 text-center">Week 5</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="timetable-calendar">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th scope="col">Sunday</th>
+                                                <th scope="col">Monday</th>
+                                                <th scope="col">Tuesday</th>
+                                                <th scope="col">Wednesday</th>
+                                                <th scope="col">Thursday</th>
+                                                <th scope="col">Friday</th>
+                                                <th scope="col">Saturday</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">8:00 am</th>
+                                                <td></td>
+                                                <td rowspan="2">
+                                                    <div class="card timetable-class"
+                                                        style="background-color: #2a84dd;">
+                                                        <div class="card-body">
+                                                            <p class="h6">CIT4009 Enterprise Computing 1</p>
+                                                            <p>Online Lecture</p>
+                                                            <p>Staff: Bruh</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">9:00 am</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">10:00 am</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">11:00 am</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="card timetable-class"
+                                                        style="background-color: #2a84dd;">
+                                                        <div class="card-body">
+                                                            <p class="h6">CIT3006 Theory of Computation</p>
+                                                            <p>Online Lecture</p>
+                                                            <p>Staff: Bruh</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">12:00 pm</th>
+                                                <td></td>
+                                                <td rowspan="3">
+                                                    <div class="card timetable-class"
+                                                        style="background-color: #2bcca9; height: 20rem;">
+                                                        <div class="card-body">
+                                                            <p class="h6">CIT4009 Enterprise Computing 1</p>
+                                                            <p>Online Lab</p>
+                                                            <p>Staff: Bruh</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="card timetable-class"
+                                                        style="background-color: #dd812a;">
+                                                        <div class="card-body">
+                                                            <p class="h6">CIT3006 Theory of Computation</p>
+                                                            <p>Online Tutorial</p>
+                                                            <p>Staff: Bruh</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td>
+                                                    <div class="card timetable-class"
+                                                        style="background-color: #dd812a;">
+                                                        <div class="card-body">
+                                                            <p class="h6">CIT4009 Enterprise Computing 1</p>
+                                                            <p>Online Tutorial</p>
+                                                            <p>Staff: Bruh</p>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">6:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">7:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">8:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">9:00 pm</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Inbox tab-->
+                <div class="tab-pane fade show" id="list-inbox" role="tabpanel" aria-labelledby="list-inbox-list">
+                    <nav class="navbar navbar-expand-lg navbar-light p-3 rounded mb-3">
+                        <p class="navbar-brand">johnbrown@student.utech.edu.jm</p>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Primary <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sent</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Draft</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="row">
+                        <div class="col-xl-4" style="border-right: 1px solid black;">
+                            <div class="list-group list-group-flush my-2">
+                                <a class="list-group-item list-group-item-action rounded" id="list-first-mail"
+                                    data-toggle="list" href="#first-mail" role="tab" aria-controls="first-mail">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="h5">UTech Ja, Student Mailer</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            Fee Payment Reminder
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="tab-content" id="nav-mailContent" style="background-color: white;">
+                                <div class="tab-pane fade show" id="first-mail" role="tabpanel"
+                                    aria-labelledby="list-first-mail">
+                                    <img class="img-fluid" src="images/fee-schedule.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-auto p-5" style="background-color: #7090b011;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <p class="h4">Address</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <address>
+                                237 Old Hope Road,<br>
+                                Kingston 6,<br>
+                                Jamaica W.I.<br>
+                                Tel: (876) 927-1680-8<br>
+                                Fax: (876) 977-4388 / (876) 927-1925
+                            </address>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row mb-2">
+                        <div class="col">
+                            <p class="h4">Our Social Media</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com/utechjamaica">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a
+                                        href="https://www.facebook.com/University-of-Technology-Jamaica-123941807618686/timeline/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://instagram.com/utechjamaica/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M15.233 5.488c-.843-.038-1.097-.046-3.233-.046s-2.389.008-3.232.046c-2.17.099-3.181 1.127-3.279 3.279-.039.844-.048 1.097-.048 3.233s.009 2.389.047 3.233c.099 2.148 1.106 3.18 3.279 3.279.843.038 1.097.047 3.233.047 2.137 0 2.39-.008 3.233-.046 2.17-.099 3.18-1.129 3.279-3.279.038-.844.046-1.097.046-3.233s-.008-2.389-.046-3.232c-.099-2.153-1.111-3.182-3.279-3.281zm-3.233 10.62c-2.269 0-4.108-1.839-4.108-4.108 0-2.269 1.84-4.108 4.108-4.108s4.108 1.839 4.108 4.108c0 2.269-1.839 4.108-4.108 4.108zm4.271-7.418c-.53 0-.96-.43-.96-.96s.43-.96.96-.96.96.43.96.96-.43.96-.96.96zm-1.604 3.31c0 1.473-1.194 2.667-2.667 2.667s-2.667-1.194-2.667-2.667c0-1.473 1.194-2.667 2.667-2.667s2.667 1.194 2.667 2.667zm4.333-12h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm.952 15.298c-.132 2.909-1.751 4.521-4.653 4.654-.854.039-1.126.048-3.299.048s-2.444-.009-3.298-.048c-2.908-.133-4.52-1.748-4.654-4.654-.039-.853-.048-1.125-.048-3.298 0-2.172.009-2.445.048-3.298.134-2.908 1.748-4.521 4.654-4.653.854-.04 1.125-.049 3.298-.049s2.445.009 3.299.048c2.908.133 4.523 1.751 4.653 4.653.039.854.048 1.127.048 3.299 0 2.173-.009 2.445-.048 3.298z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.youtube.com/user/utechjamaica">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M9.279 13.52h-.939v5.027h-.908v-5.027h-.94v-.854h2.788v.854zm5.395 1.721v2.406c0 .537-.2.954-.736.954-.296 0-.541-.108-.767-.388v.333h-.813v-5.88h.813v1.893c.183-.222.429-.405.718-.405.59 0 .785.499.785 1.087zm-.83.049c0-.146-.027-.257-.086-.333-.098-.129-.279-.143-.42-.071l-.167.132v2.703l.19.153c.132.066.324.071.413-.045.046-.061.069-.161.069-.299v-2.24zm-2.347-5.859c.229 0 .354-.183.354-.431v-2.119c0-.255-.111-.434-.371-.434-.237 0-.353.185-.353.434v2.119c.001.24.137.431.37.431zm-.733 8.07c-.099.123-.317.325-.475.325-.172 0-.215-.118-.215-.292v-3.325h-.805v3.626c0 .88.597.885 1.031.636.16-.092.315-.227.464-.403v.479h.807v-4.338h-.807v3.292zm13.236-12.501v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-10.566 4.427c0 .45.137.813.592.813.256 0 .611-.133.979-.569v.503h.847v-4.554h-.847v3.457c-.104.129-.333.341-.498.341-.182 0-.226-.124-.226-.307v-3.491h-.847v3.807zm-3.177-2.621v2.233c0 .803.419 1.22 1.24 1.22.682 0 1.218-.456 1.218-1.22v-2.233c0-.713-.531-1.224-1.218-1.224-.745 0-1.24.493-1.24 1.224zm-3.155-2.806l1.135 3.67v2.504h.953v-2.504l1.11-3.67h-.969l-.611 2.468-.658-2.468h-.96zm11.564 11.667c-.014-2.978-.232-4.116-2.111-4.245-1.734-.118-7.377-.118-9.109 0-1.876.128-2.098 1.262-2.111 4.245.014 2.978.233 4.117 2.111 4.245 1.732.118 7.375.118 9.109 0 1.877-.129 2.097-1.262 2.111-4.245zm-1.011-.292v1.104h-1.542v.818c0 .325.027.607.352.607.34 0 .36-.229.36-.607v-.301h.83v.326c0 .836-.358 1.342-1.208 1.342-.771 0-1.164-.561-1.164-1.342v-1.947c0-.753.497-1.275 1.225-1.275.773-.001 1.147.491 1.147 1.275zm-.83-.008c0-.293-.062-.508-.353-.508-.299 0-.359.21-.359.508v.439h.712v-.439z" />
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer p-3" style="background-color: #7090b044;">
+        <div class="container text-center">
+            Copyright © University of Technology, Jamaica e:Vision v8.6.0 | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

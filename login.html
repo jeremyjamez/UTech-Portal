@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to the portal</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background-image: url('images/login-background.png'); background-repeat: no-repeat; background-size: cover;">
+    <nav class="d-flex">
+        <img class="logo" src="https://www.kingstoncityrun.com/v2/wp-content/uploads/2019/01/UTECH.png">
+    </nav>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-6">
+                <div class="card ios-card">
+                    <div class="card-header">
+                        <p style="color: red;"><strong>For UTech Students Only: </strong>Enter your ID number for your username. If you are logging on for the first time, please use your date of birth as your password. The new date format is ddmmyy without the slashes. Eg: 130773</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username" aria-describedby="usernameHelp">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                        </form>
+                        <div class="d-flex justify-content-center">
+                            <a href="student.html" class="btn btn-primary ios-button">Login</a>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>If you have forgotten your password please enter your username above and then click the link below to have a new password emailed to you.</p>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
